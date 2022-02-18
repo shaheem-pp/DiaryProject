@@ -14,7 +14,7 @@ print(get_random_secret_key())
 ```
 4. You will get a random digits as output. `Copy` the output
 5. create file name `secret.py inside diaryProject folder`
-6. `paste` the output in `THE-OUPUT-HERE` and copy paste the below code inside `secret_settings.py`
+6. `paste` the output in `THE-OUPUT-HERE` and copy paste the below code inside `secret.py`
 ```python
 SECRET_KEY = 'THE-OUTPUT-HERE'
 ```
