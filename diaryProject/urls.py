@@ -19,5 +19,9 @@ from diaryApp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index)
+    path('', views.index),
+    path('login/', views.login),
+    path('register/', views.register),
+    path('new_entry/', views.entry_page),
+    path('view_diary/', views.view_diary)
 ]
