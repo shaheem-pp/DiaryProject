@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html>
+<style>
+	h2 { text-align: center; }
+h4 { text-align: center;}
+form {
+            padding-left: 9rem;
+            padding-right: 9rem;
+            padding-bottom: 5%;
+            border: 3px solid palegoldenrod;
+        }
+        
+        
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 3px solid #ccc;
+            box-sizing: border-box;
+        }
+        
+        
+        button {
+            background-color: grey;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        
+        
+        button:hover {
+            opacity: 0.8;
+        }
+        
+        
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+
+        }
+        .register_new_user {
+            width: auto;
+            padding: 10px 18px;
+            background-color: cornflowerblue;
+        }
+        
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+        }
+        
+        
+        img.avatar {
+            width: 40%;
+            height: 50%;
+            border-radius: 50%;
+        }
+        
+        
+        .container {
+            padding: 16px;
+        }
+        
+        
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+        
+        
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+</style>
+	
+	
+<head>
+    <title>
+    Login</title>
+    
+    
+
+</head>
+<body>
+
+	<h2>Login Page</h2>
+    <h4>Welcome to My_Daybook</h4>
+	<!--Step 1 : Adding HTML-->
+	<form action="/action_page.php">
+		<div class="imgcontainer">
+			<img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpkNK-XH6BHogTuU9G3mUxwVdYxnQENwZEvPBHfylGe7Bf2AntCDE5x7iK6AUws5-aHxI&usqp=CAU
+			alt="Avatar" class="avatar">
+		</div>
+
+		<div class="container">
+			<label><b>Username</b></label>
+			<input type="text" placeholder="Enter Username" name="uname" required>
+
+			<label><b>Password</b></label>
+			<input type="password" placeholder="Enter Password" name="psw" required>
+
+			<button type="submit">Login</button>
+			<input type="checkbox" checked="checked"> Remember me
+		</div>
+
+		<div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="register_new_user">Register new user</button>
+			<button type="button" class="cancelbtn">Cancel</button>
+			<span class="psw">Forgot <a href="#">password?</a></span>
+
+		</div>
+	</form>
+
+</body>
+
+</html>
