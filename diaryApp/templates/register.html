@@ -6,31 +6,31 @@
     {# Your Code Here#}
 
 
-    {#    <div class="container my-5">#}
-    {#        <h1 class="text-center mb-5 display-1">Register</h1>#}
-    {#        <form method="post" action="/">#}
-    {#            {% csrf_token %}#}
-    {#            <div class="form-group">#}
-    {#                <label for="fullname">Full Name</label>#}
-    {#                <input type="text" class="form-control" id="fullname" name="fullname" aria-describedby="fullname">#}
-    {#            </div>#}
-    {#            <div class="form-group">#}
-    {#                <label for="email">Email</label>#}
-    {#                <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">#}
-    {#                <small id="emailHelp" class="form-text text-muted">Your email will be your username.</small>#}
-    {#            </div>#}
-    {#            <div class="form-group">#}
-    {#                <label for="password">Password</label>#}
-    {#                <input type="password" name="password" class="form-control" id="password">#}
-    {#            </div>#}
-    {#            <button type="submit" class="btn btn-dark btn-block btn-lg">Submit</button>#}
-    {#        </form>#}
-    {#        <br>#}
-    {#        <hr>#}
-    {#        <br>#}
-    {#        <p>Already a Customer?</p>#}
-    {#        <a href="/login/">#}
-    {#            <button type="submit" class="btn btn-outline-dark btn-block btn-lg">Login</button>#}
-    {#        </a>#}
-    {#    </div>#}
+    <div class="container my-5">
+        <h1 class="text-center mb-5 display-1">Register</h1>
+        <form method="post" action="/">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" class="form-control" id="fullname" name="fullname" aria-describedby="fullname">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">
+                <small id="emailHelp" class="form-text text-muted">Your email will be your username.</small>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" class="form-control" id="password">
+            </div>
+            <button type="submit" class="btn btn-dark btn-block btn-lg">Submit</button>
+        </form>
+        <br>
+        <hr>
+        <br>
+        <p>Already a Customer?</p>
+        <a href="/login/">
+            <button type="submit" class="btn btn-outline-dark btn-block btn-lg">Login</button>
+        </a>
+    </div>
 {% endblock %}
