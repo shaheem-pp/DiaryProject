@@ -34,7 +34,7 @@ def view_diary(request, id):
 
 def new_diary(request):
     tbl = tbl_diary()
-    user = auth_user()
+    # user = auth_user()
     tbl.title = request.POST.get('title')
     tbl.content = request.POST.get('content')
     tbl.date = "na"
