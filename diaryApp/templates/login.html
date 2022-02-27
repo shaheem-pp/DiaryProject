@@ -1,42 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 
-    {# Your Code Here#}
-    {#    <h2>Login Page</h2>#}
-    {#    <h4>Welcome to My_Daybook</h4>#}
-    {#    <!--Step 1 : Adding HTML-->#}
-    {#    <form action="/action_page.php">#}
-
-    {##}
-    {#        <div class="container">#}
-    {#            <label><b>Username</b></label>#}
-    {#            <input type="text" placeholder="Enter Username" name="uname" required>#}
-    {##}
-    {#            <label><b>Password</b></label>#}
-    {#            <input type="password" placeholder="Enter Password" name="psw" required>#}
-    {##}
-    {#            <button type="submit">Login</button>#}
-    {#            <input type="checkbox" checked="checked"> Remember me#}
-    {#        </div>#}
-    {##}
-    {#        <div class="container" style="background-color:#f1f1f1">#}
-    {#            <button type="button" class="register_new_user">Register new user</button>#}
-    {#            <button type="button" class="cancelbtn">Cancel</button>#}
-    {#            <span class="psw">Forgot <a href="#">password?</a></span>#}
-    {##}
-    {#        </div>#}
-    {#    </form>#}
-
-    {# Your Code Here#}
-
-
     <div class="container my-5">
-{#        <div class="imgcontainer">#}
-{#            <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpkNK-XH6BHogTuU9G3mUxwVdYxnQENwZEvPBHfylGe7Bf2AntCDE5x7iK6AUws5-aHxI&usqp=CAU#}
-{#                 alt="Avatar" class="avatar">#}
-{#        </div>#}
         <h1 class="text-center mb-5 display-1">Login</h1>
-        <form method="post" action="/">
+        <form method="post" action="/do_login/">
             {% csrf_token %}
             <div class="form-group">
                 <label for="email">Username</label>

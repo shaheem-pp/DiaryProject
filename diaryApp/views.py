@@ -1,9 +1,11 @@
 import datetime
 
-from django.shortcuts import render, redirect
+from django.shortcuts import redirect, render
+
+from diaryApp.models import *
+
 
 # Create your views here.
-from diaryApp.models import *
 
 
 def index(request):
@@ -28,24 +30,6 @@ def view_diary(request, id):
     return render(request, "diary.html", {"data": tbl, "title": tbl.title})
 
 
-def new_register(request):
-    tbl = tbl_user()
-    empty = ["", " ", ".", ","]
-    name = request.POST.get('fullname')
-    email = request.POST.get('email')
-    password = request.POST.get('password')
-    if name not in empty and email not in empty and password not in empty:
-        if tbl_user.objects.filter(email=email).exists():
-            return redirect(register)
-        else:
-            tbl.name = name
-            tbl.email = email
-            tbl.password = password
-            tbl.save()
-        return redirect(index)
-    return redirect(register)
-
-
 def new_diary(request):
     tbl = tbl_diary()
     tbl.title = request.POST.get('title')
@@ -53,9 +37,22 @@ def new_diary(request):
     tbl.date = "na"
     tbl.save()
     x = datetime.datetime.now()
-    tbl.date = x.strftime("%d %B %Y | %I:%M %p")
+    tbl.date = x.strftime("Created on: %d %B %Y")
     tbl.save()
     return redirect(index)
+
+
+def edit_diary(request, id):
+    tbl = tbl_diary.objects.get(id=id)
+    return render(request, "edit_diary.html", {"title": "Edit", "diary": tbl})
+
+
+def edit_diary_submit(request, id):
+    tbl = tbl_diary.objects.get(id=id)
+    tbl.title = request.POST.get("Title")
+    tbl.content = request.POST.get("Content")
+    tbl.save()
+    return redirect('/view_diary/' + str(id))
 
 
 def delete_diary(request, id):
@@ -65,12 +62,4 @@ def delete_diary(request, id):
 
 
 def signout(request):
-    return redirect(login)
-
-
-def do_login(request):
-    email = request.POST.get('email')
-    password = request.POST.get('password')
-    if tbl_user.objects.filter(email=email, password=password).exists():
-        return redirect(index)
     return redirect(login)

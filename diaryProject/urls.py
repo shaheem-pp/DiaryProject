@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+
 from diaryApp import views
 
 urlpatterns = [
@@ -24,8 +25,12 @@ urlpatterns = [
     path('register/', views.register),
     path('new_entry/', views.entry_page),
     path('view_diary/<int:id>', views.view_diary),
-    path('new_register/', views.new_register),
+    # path('new_register/', views.new_register),
     path('new_diary/', views.new_diary),
     path('delete_diary/<int:id>', views.delete_diary),
     path('signout/', views.signout),
+    path('edit_diary/<int:id>', views.edit_diary),
+    path('edit_diary_submit/<int:id>', views.edit_diary_submit),
+    path('delete_diary/<int:id>', views.delete_diary),
+    # path('accounts/', include('django.contrib.auth.urls'))
 ]
