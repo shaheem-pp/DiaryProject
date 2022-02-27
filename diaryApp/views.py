@@ -2,6 +2,7 @@ import datetime
 
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect, render
+
 from diaryApp.models import *
 
 
@@ -9,18 +10,8 @@ from diaryApp.models import *
 
 @login_required()
 def index(request):
-    tbl = tbl_diary.objects.all()
+    tbl = tbl_diary.objects.filter(user=request.user)
     return render(request, "index.html", {"data": tbl, "title": "Daybook"})
-
-
-#
-#
-# def login(request):
-#     return render(request, "login.html", {"title": "Login | Daybook"})
-#
-#
-# def register(request):
-#     return render(request, "register.html", {"title": "Register | Daybook"})
 
 
 def entry_page(request):
@@ -34,7 +25,7 @@ def view_diary(request, id):
 
 def new_diary(request):
     tbl = tbl_diary()
-    # user = auth_user()
+    tbl.user = request.user
     tbl.title = request.POST.get('title')
     tbl.content = request.POST.get('content')
     tbl.date = "na"
