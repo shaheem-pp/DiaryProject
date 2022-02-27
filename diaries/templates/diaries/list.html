@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Current Diaries</h1>
+<a href="{% url 'diaries:create' %}">Create</a>
+<hr>
+<ol>
+{% for diary in diaries %}
+
+    <li>{{ diary }} with {{ diary.created_at }} <a href="{% url 'diaries:detail' diary.id %}">View</a> <a href="{% url 'diaries:edit' diary.id %}">Edit</a></li>
+
+{% endfor %}
+
+</ol>
+
+    
+
+
+{% endblock content %}

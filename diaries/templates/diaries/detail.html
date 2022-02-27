@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <a href="{% url 'diaries:list' %}">Back</a>
+    <a href="{% url 'diaries:edit' diary.id %}">Edit</a>
+    <h1>{{ diary.title }} on {{ diary.created_at }}</h1>
+    <hr>
+    <p>
+        {{ diary.content }}
+    </p>
+
+{% endblock content %}
