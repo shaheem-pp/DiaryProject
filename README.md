@@ -88,3 +88,7 @@ python3 manage.py runserver
 - Django Auth - For Authentication
 - SQLite3 - As Database
 - Azure Hosting
+
+-----
+
+**This project is done as part of TinkerHub Co-Coder Event**
