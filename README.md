@@ -1,13 +1,15 @@
 # Daybook📕
 
 Greetings!
+
 Do you want to keep an interesting journal?
 You've arrived to the right place.
+
 **Daybook** is a personalised diary writing online software that allows you to keep track of all your favourite experiences.
 Simply log in and select Add New Diary to start a new diary for the day.
+
 The goal of the project is to create a basic app that includes an authorisation page, a new user registration page, and a primary content page where users may add, amend, or remove existing entries and you can write the Diary with *Markdown*.
-utilised a variety of technologies such as django and python
-Shaheem PP and Riya Mary Jude done the project. 
+utilised a variety of technologies such as django and python. The project is done by Riya Mary Jude and Shaheem PP
 
 ![GIF](https://media0.giphy.com/media/ktEr4Ax4Kci6ESDQkZ/giphy.gif?cid=ecf05e4776vy7e9j929bxqgun2t58dldfbqqmk8x2pjm30ul&rid=giphy.gif&ct=g)
 
@@ -40,7 +42,7 @@ Shaheem PP and Riya Mary Jude done the project.
   
 ---
 
-## How to Use?
+## How to Run and Configure?
 
 1. `fork` the project
 2. clone using command line(make sure git is installed)
@@ -81,7 +83,7 @@ python3 manage.py runserver
 
 ## Libraries Used
 
-- Django - Framework
+- Django - Framework(Version 4.0.1)
 - Markdown - For Markdown Editor
 - Django Auth - For Authentication
 - SQLite3 - As Database
