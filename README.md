@@ -62,11 +62,13 @@ SECRET_KEY = 'THE-OUTPUT-HERE'
 ```
 7. Run migrations in `CMD` from `To Do` Folder
 ```
+pip install markdown
 python manage.py makemigrations
 python manage.py migrate
 ```
 For Mac and Linux
 ```
+pip install markdown
 python3 manage.py makemigrations
 python3 manage.py migrate
 ```
